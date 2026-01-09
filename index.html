@@ -33,7 +33,7 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     font-family: 'Poppins', sans-serif;
   }
 
-  /* Video background */
+  /* Video Background */
   .video-bg {
     position: fixed;
     inset: 0;
@@ -43,23 +43,27 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     z-index: -2;
   }
 
-  /* Soft overlay */
+  /* Overlay */
   .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.75)
+    );
     z-index: -1;
   }
 
   /* Card */
   .card {
-    background: #ffffff;
-    border-radius: 22px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 24px;
     max-width: 360px;
     width: 100%;
-    padding: 1.8rem;
+    padding: 2rem 1.7rem;
     text-align: center;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.45);
   }
 
   .btn-telegram {
@@ -68,10 +72,11 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     justify-content: center;
     gap: 8px;
     padding: 14px;
-    border-radius: 14px;
+    border-radius: 16px;
     font-weight: 800;
+    font-size: 1rem;
     color: white;
-    background: linear-gradient(135deg, #0088cc, #00b4ff);
+    background: linear-gradient(135deg, #0088cc, #00c2ff);
     transition: 0.25s;
   }
 
@@ -90,7 +95,7 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
 
 <div class="overlay"></div>
 
-<!-- CENTER CARD -->
+<!-- CONTENT -->
 <div class="min-h-screen flex items-center justify-center px-4">
 
   <div class="card">
@@ -99,28 +104,28 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     <img
       src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/pankaj-image-2.jpg"
       alt="Profile"
-      class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-gray-100 shadow-md"
+      class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-lg"
     />
 
     <!-- Name -->
     <h1 class="text-lg font-extrabold text-gray-900">
       PANKAJ BHARDWAJ
     </h1>
-    <p class="text-sm font-semibold text-gray-600 mb-2">
-      OFFICIAL (SEBI REGISTER)
+    <p class="text-sm font-semibold text-gray-600 mb-1">
+      OFFICIAL • SEBI REGISTER
     </p>
 
     <!-- Experience -->
-    <div class="text-sm font-bold text-red-600 mb-4">
+    <p class="text-sm font-bold text-red-600 mb-4">
       📊 17 Years Trading Experience
-    </div>
+    </p>
 
     <!-- CTA -->
     <a href="https://t.me/+Q4Qk9GrrwHI5NzBl" target="_blank" class="btn-telegram mb-4">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
         <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
       </svg>
-      JOIN TELEGRAM
+      JOIN TELEGRAM NOW
     </a>
 
     <!-- Trust -->
@@ -131,7 +136,7 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     <!-- Points -->
     <div class="text-sm text-gray-700 space-y-1 mb-4">
       <p>✔ Live Market Trades</p>
-      <p>✔ Accurate Trading Signals</p>
+      <p>✔ Accurate Signals</p>
       <p>✔ Real-Time Updates</p>
     </div>
 
