@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-<!-- Meta Pixel Code (UNCHANGED) -->
+<!-- Meta Pixel Code (DO NOT TOUCH) -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -30,33 +30,36 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
 <style>
   body {
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #0f172a, #020617);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    margin: 0;
+    overflow-x: hidden;
   }
 
-  .glass-card {
-    background: rgba(255, 255, 255, 0.08);
+  /* Video Background */
+  .video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  /* Dark Overlay */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(2,6,23,0.75);
+    z-index: -1;
+  }
+
+  /* Glass Card */
+  .glass {
+    background: rgba(255,255,255,0.08);
     backdrop-filter: blur(18px);
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 24px;
-    max-width: 420px;
-    width: 100%;
-    padding: 2rem 1.8rem;
-    text-align: center;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
-  }
-
-  .profile-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border: 4px solid rgba(255,255,255,0.6);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    margin: auto;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
   }
 
   .btn-telegram {
@@ -64,95 +67,105 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 14px;
+    padding: 15px;
     border-radius: 16px;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 1.05rem;
     color: #fff;
     background: linear-gradient(135deg, #0088cc, #22d3ee);
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,136,204,0.5);
+    box-shadow: 0 15px 40px rgba(0,136,204,0.6);
   }
 
   .btn-telegram:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 18px 45px rgba(0,136,204,0.7);
+    transform: translateY(-3px) scale(1.03);
   }
 
   .badge {
     background: linear-gradient(135deg, #dc2626, #f97316);
-    color: white;
-    padding: 6px 14px;
+    padding: 6px 16px;
     border-radius: 999px;
     font-size: 0.85rem;
-    font-weight: 600;
-    display: inline-block;
-  }
-
-  .feature {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    font-size: 0.95rem;
-    color: #e5e7eb;
+    font-weight: 700;
+    color: #fff;
   }
 </style>
 
 </head>
 <body>
 
-<div class="glass-card">
+<!-- Motion Video Background -->
+<video class="video-bg" autoplay muted loop playsinline>
+  <source src="https://cdn.coverr.co/videos/coverr-financial-data-animation-5179/1080p.mp4" type="video/mp4">
+</video>
 
-  <!-- Profile Image -->
-  <img
-    src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/pankaj-image-2.jpg"
-    alt="Profile"
-    class="profile-img mb-4"
-  />
+<div class="overlay"></div>
 
-  <!-- Name -->
-  <h1 class="text-xl font-extrabold text-white leading-snug">
-    PANKAJ BHARDWAJ OFFICIAL
-  </h1>
+<!-- Layout -->
+<div class="min-h-screen flex items-center justify-center px-4">
 
-  <p class="text-sm text-cyan-300 font-semibold mb-3">
-    (SEBI REGISTER) 💸🏆
-  </p>
+  <div class="glass max-w-5xl w-full grid md:grid-cols-2 gap-8 p-8">
 
-  <!-- Experience Badge -->
-  <span class="badge mb-5 inline-block">
-    📊 17 Years Trading Experience
-  </span>
+    <!-- LEFT CONTENT -->
+    <div class="flex flex-col justify-center text-white">
+      <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-4">
+        Trade Smarter.<br>
+        Earn Consistently.
+      </h1>
 
-  <!-- CTA -->
-  <a href="https://t.me/+Q4Qk9GrrwHI5NzBl" target="_blank" class="btn-telegram my-6">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-      <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
-    </svg>
-    JOIN TELEGRAM CHANNEL
-  </a>
+      <p class="text-cyan-300 font-semibold mb-4">
+        Join India’s Trusted SEBI Registered Trading Community
+      </p>
 
-  <!-- Profit Highlight -->
-  <p class="text-yellow-400 font-bold mb-4">
-    💎 DAILY PROFIT GUARANTEE 💎
-  </p>
+      <span class="badge mb-6 w-fit">
+        📊 17 Years Market Experience
+      </span>
 
-  <!-- Features -->
-  <div class="space-y-3 text-left mb-6">
-    <div class="feature">📊 <span><b>Live Daily Trades</b> directly from my portfolio</span></div>
-    <div class="feature">🔥 <span><b>Exclusive Signals</b> used by professionals</span></div>
-    <div class="feature">💯 <span><b>High Accuracy</b> with proven consistency</span></div>
-    <div class="feature">⚡ <span><b>Instant Updates</b> with real-time alerts</span></div>
+      <div class="space-y-3 text-gray-200">
+        <p>✅ Live Daily Trades</p>
+        <p>✅ High Accuracy Signals</p>
+        <p>✅ Real-Time Market Updates</p>
+        <p>✅ Beginner Friendly Guidance</p>
+      </div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="glass p-6 text-center text-white">
+
+      <img
+        src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/pankaj-image-2.jpg"
+        class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-xl"
+        alt="Profile"
+      />
+
+      <h2 class="text-xl font-extrabold">
+        PANKAJ BHARDWAJ OFFICIAL
+      </h2>
+      <p class="text-sm text-cyan-300 font-semibold mb-3">
+        (SEBI REGISTER) 💸🏆
+      </p>
+
+      <p class="text-yellow-400 font-bold mb-4">
+        💎 DAILY PROFIT GUARANTEE 💎
+      </p>
+
+      <a href="https://t.me/+Q4Qk9GrrwHI5NzBl" target="_blank" class="btn-telegram mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
+        </svg>
+        JOIN TELEGRAM NOW
+      </a>
+
+      <h3 class="font-bold mb-1">
+        क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?
+      </h3>
+      <p class="text-red-400 font-semibold">
+        अगर हां, तो ऊपर दिए गए बटन पर क्लिक करें 🚀
+      </p>
+
+    </div>
+
   </div>
-
-  <!-- Hindi CTA -->
-  <h2 class="text-lg font-bold text-white mb-1">
-    क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?
-  </h2>
-  <p class="text-red-400 font-semibold">
-    अगर हां, तो ऊपर दिए गए Telegram बटन पर क्लिक करें 🚀
-  </p>
-
 </div>
 
 </body>
