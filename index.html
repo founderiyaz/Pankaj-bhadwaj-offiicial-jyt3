@@ -30,12 +30,31 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
 <style>
   body {
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #0f172a, #020617);
     min-height: 100vh;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    overflow: hidden;
+  }
+
+  /* VIDEO BACKGROUND */
+  .video-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  /* OVERLAY */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(2,6,23,0.75);
+    z-index: -1;
   }
 
   .glass-card {
@@ -101,16 +120,21 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
 </head>
 <body>
 
+<!-- MIXKIT VIDEO BACKGROUND -->
+<video class="video-bg" autoplay muted loop playsinline>
+  <source src="https://assets.mixkit.co/videos/9607/9607-720.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
 <div class="glass-card">
 
-  <!-- Profile Image -->
   <img
     src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/pankaj-image-2.jpg"
     alt="Profile"
     class="profile-img mb-4"
   />
 
-  <!-- Name -->
   <h1 class="text-xl font-extrabold text-white leading-snug">
     PANKAJ BHARDWAJ OFFICIAL
   </h1>
@@ -119,12 +143,10 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     (SEBI REGISTER) 💸🏆
   </p>
 
-  <!-- Experience Badge -->
   <span class="badge mb-5 inline-block">
     📊 17 Years Trading Experience
   </span>
 
-  <!-- CTA -->
   <a href="https://t.me/+Q4Qk9GrrwHI5NzBl" target="_blank" class="btn-telegram my-6">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
       <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
@@ -132,12 +154,10 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     JOIN TELEGRAM CHANNEL
   </a>
 
-  <!-- Profit Highlight -->
   <p class="text-yellow-400 font-bold mb-4">
     💎 DAILY PROFIT GUARANTEE 💎
   </p>
 
-  <!-- Features -->
   <div class="space-y-3 text-left mb-6">
     <div class="feature">📊 <span><b>Live Daily Trades</b> directly from my portfolio</span></div>
     <div class="feature">🔥 <span><b>Exclusive Signals</b> used by professionals</span></div>
@@ -145,7 +165,6 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     <div class="feature">⚡ <span><b>Instant Updates</b> with real-time alerts</span></div>
   </div>
 
-  <!-- Hindi CTA -->
   <h2 class="text-lg font-bold text-white mb-1">
     क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?
   </h2>
