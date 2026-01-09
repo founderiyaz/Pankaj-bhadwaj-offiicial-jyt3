@@ -31,11 +31,10 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #ffffff;
+    color: #fff;
   }
 
-  /* VIDEO BACKGROUND */
-  .video-bg {
+  video {
     position: fixed;
     inset: 0;
     width: 100%;
@@ -44,7 +43,6 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     z-index: -2;
   }
 
-  /* OVERLAY */
   .overlay {
     position: fixed;
     inset: 0;
@@ -52,28 +50,25 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     z-index: -1;
   }
 
-  /* MAIN GLASS */
-  .glass-main {
+  .glass {
     background: rgba(255,255,255,0.22);
     backdrop-filter: blur(14px);
-    border-radius: 26px;
-    padding: 2rem 1.6rem;
+    border-radius: 28px;
+    padding: 2.5rem 1.8rem;
     max-width: 480px;
     width: 100%;
     box-shadow: 0 30px 70px rgba(0,0,0,0.45);
   }
 
   .btn-telegram {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    background: linear-gradient(135deg, #0088cc, #22d3ee);
     padding: 15px;
     border-radius: 16px;
     font-weight: 800;
-    font-size: 1.05rem;
-    color: white;
-    background: linear-gradient(135deg, #0088cc, #22d3ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     box-shadow: 0 15px 40px rgba(0,136,204,0.6);
   }
 </style>
@@ -81,42 +76,45 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
 </head>
 <body>
 
-<!-- VIDEO -->
-<video class="video-bg" autoplay muted loop playsinline>
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop playsinline>
   <source src="https://assets.mixkit.co/videos/9607/9607-720.mp4" type="video/mp4">
 </video>
 <div class="overlay"></div>
 
-<!-- CENTER -->
+<!-- PAGE -->
 <div class="min-h-screen flex items-center justify-center px-4">
 
-  <!-- ONE GLASS CONTAINER -->
-  <div class="glass-main text-center">
+  <div class="glass text-center">
 
     <!-- PROFILE -->
     <img
       src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/pankaj-image-2.jpg"
-      class="w-28 h-28 rounded-full mx-auto mb-4 border-4 border-white shadow-xl"
+      class="w-28 h-28 rounded-full mx-auto mb-6 border-4 border-white shadow-xl"
       alt="Profile"
     />
 
-    <h1 class="text-2xl font-extrabold">
+    <!-- NAME -->
+    <h1 class="text-2xl font-extrabold mb-2">
       PANKAJ BHARDWAJ OFFICIAL
     </h1>
-    <p class="text-cyan-200 font-semibold mb-1">
+
+    <p class="text-cyan-300 font-semibold mb-4">
       (SEBI REGISTER) 💸🏆
     </p>
 
-    <p class="text-yellow-300 font-bold mb-4">
+    <!-- EXPERIENCE -->
+    <p class="text-red-500 font-bold text-lg mb-8">
       📊 17 Years Trading Experience
     </p>
 
-    <!-- CTA -->
-    <p class="text-yellow-300 font-bold mb-3">
+    <!-- PROFIT -->
+    <p class="text-yellow-400 font-bold text-lg mb-6">
       💎 DAILY PROFIT GUARANTEE 💎
     </p>
 
-    <a href="https://t.me/+Q4Qk9GrrwHI5NzBl" target="_blank" class="btn-telegram mb-5">
+    <!-- CTA -->
+    <a href="https://t.me/+Q4Qk9GrrwHI5NzBl" target="_blank" class="btn-telegram mb-8">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
         <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
       </svg>
@@ -124,18 +122,19 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     </a>
 
     <!-- FEATURES -->
-    <div class="text-sm text-left space-y-2 text-white mb-5">
-      <p>📊 Live Daily Trades</p>
-      <p>🔥 Exclusive Signals</p>
-      <p>💯 High Accuracy Strategy</p>
-      <p>⚡ Real-Time Updates</p>
+    <div class="space-y-3 text-left text-white mb-8">
+      <p>📊 <b>Live Daily Trades</b> – Portfolio based</p>
+      <p>🔥 <b>Exclusive Signals</b> – Pro level entries</p>
+      <p>💯 <b>High Accuracy</b> – Tested strategy</p>
+      <p>⚡ <b>Real-Time Updates</b> – Instant alerts</p>
     </div>
 
     <!-- HINDI -->
-    <h2 class="text-lg font-bold mb-1">
+    <h2 class="text-lg font-bold mb-2">
       क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?
     </h2>
-    <p class="text-yellow-300 font-semibold">
+
+    <p class="text-red-400 font-semibold">
       अगर हां, तो ऊपर दिए गए Telegram बटन पर क्लिक करें 🚀
     </p>
 
