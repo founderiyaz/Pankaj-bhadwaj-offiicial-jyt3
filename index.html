@@ -29,12 +29,18 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
 
 <style>
   body {
-    margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow: hidden;
   }
 
-  video {
+  /* VIDEO BACKGROUND */
+  .video-bg {
     position: fixed;
     inset: 0;
     width: 100%;
@@ -43,102 +49,127 @@ src="https://www.facebook.com/tr?id=1534327684328861&ev=PageView&noscript=1"/>
     z-index: -2;
   }
 
+  /* OVERLAY */
   .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(2,6,23,0.75);
     z-index: -1;
   }
 
-  .glass {
-    background: rgba(255,255,255,0.22);
-    backdrop-filter: blur(14px);
-    border-radius: 28px;
-    padding: 2.5rem 1.8rem;
-    max-width: 480px;
+  .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 24px;
+    max-width: 420px;
     width: 100%;
-    box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+    padding: 2rem 1.8rem;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+  }
+
+  .profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.6);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    margin: auto;
   }
 
   .btn-telegram {
-    background: linear-gradient(135deg, #0088cc, #22d3ee);
-    padding: 15px;
-    border-radius: 16px;
-    font-weight: 800;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    box-shadow: 0 15px 40px rgba(0,136,204,0.6);
+    padding: 14px;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #fff;
+    background: linear-gradient(135deg, #0088cc, #22d3ee);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,136,204,0.5);
+  }
+
+  .btn-telegram:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 18px 45px rgba(0,136,204,0.7);
+  }
+
+  .badge {
+    background: linear-gradient(135deg, #dc2626, #f97316);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  .feature {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: #e5e7eb;
   }
 </style>
 
 </head>
 <body>
 
-<!-- VIDEO BACKGROUND -->
-<video autoplay muted loop playsinline>
+<!-- MIXKIT VIDEO BACKGROUND -->
+<video class="video-bg" autoplay muted loop playsinline>
   <source src="https://assets.mixkit.co/videos/9607/9607-720.mp4" type="video/mp4">
 </video>
+
 <div class="overlay"></div>
 
-<!-- PAGE -->
-<div class="min-h-screen flex items-center justify-center px-4">
+<div class="glass-card">
 
-  <div class="glass text-center">
+  <img
+    src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/pankaj-image-2.jpg"
+    alt="Profile"
+    class="profile-img mb-4"
+  />
 
-    <!-- PROFILE -->
-    <img
-      src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/pankaj-image-2.jpg"
-      class="w-28 h-28 rounded-full mx-auto mb-6 border-4 border-white shadow-xl"
-      alt="Profile"
-    />
+  <h1 class="text-xl font-extrabold text-white leading-snug">
+    PANKAJ BHARDWAJ OFFICIAL
+  </h1>
 
-    <!-- NAME -->
-    <h1 class="text-2xl font-extrabold mb-2">
-      PANKAJ BHARDWAJ OFFICIAL
-    </h1>
+  <p class="text-sm text-cyan-300 font-semibold mb-3">
+    (SEBI REGISTER) 💸🏆
+  </p>
 
-    <p class="text-cyan-300 font-semibold mb-4">
-      (SEBI REGISTER) 💸🏆
-    </p>
+  <span class="badge mb-5 inline-block">
+    📊 17 Years Trading Experience
+  </span>
 
-    <!-- EXPERIENCE -->
-    <p class="text-red-500 font-bold text-lg mb-8">
-      📊 17 Years Trading Experience
-    </p>
+  <a href="https://t.me/+Q4Qk9GrrwHI5NzBl" target="_blank" class="btn-telegram my-6">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
+    </svg>
+    JOIN TELEGRAM CHANNEL
+  </a>
+ <h2 class="text-lg font-bold text-white mb-1">
+    क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?
+  </h2>
+  <p class="text-red-400 font-semibold">
+    अगर हां, तो ऊपर दिए गए Telegram बटन पर क्लिक करें 🚀
+  </p>
+  <p class="text-yellow-400 font-bold mb-4">
+    💎 DAILY PROFIT GUARANTEE 💎
+  </p>
 
-    <!-- PROFIT -->
-    <p class="text-yellow-400 font-bold text-lg mb-6">
-      💎 DAILY PROFIT GUARANTEE 💎
-    </p>
-
-    <!-- CTA -->
-    <a href="https://t.me/+Q4Qk9GrrwHI5NzBl" target="_blank" class="btn-telegram mb-8">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
-      </svg>
-      JOIN TELEGRAM CHANNEL
-    </a>
-
-    <!-- FEATURES -->
-    <div class="space-y-3 text-left text-white mb-8">
-      <p>📊 <b>Live Daily Trades</b> – Portfolio based</p>
-      <p>🔥 <b>Exclusive Signals</b> – Pro level entries</p>
-      <p>💯 <b>High Accuracy</b> – Tested strategy</p>
-      <p>⚡ <b>Real-Time Updates</b> – Instant alerts</p>
-    </div>
-
-    <!-- HINDI -->
-    <h2 class="text-lg font-bold mb-2">
-      क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?
-    </h2>
-
-    <p class="text-red-400 font-semibold">
-      अगर हां, तो ऊपर दिए गए Telegram बटन पर क्लिक करें 🚀
-    </p>
-
+  <div class="space-y-3 text-left mb-6">
+    <div class="feature">📊 <span><b>Live Daily Trades</b> directly from my portfolio</span></div>
+    <div class="feature">🔥 <span><b>Exclusive Signals</b> used by professionals</span></div>
+    <div class="feature">💯 <span><b>High Accuracy</b> with proven consistency</span></div>
+    <div class="feature">⚡ <span><b>Instant Updates</b> with real-time alerts</span></div>
   </div>
+
 </div>
 
 </body>
